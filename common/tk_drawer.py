@@ -6,21 +6,21 @@ SIZE = 900
 SCALE = 1.5
 
 
-def x(p): # pragma: no cover
+def x(p):  # pragma: no cover
     """ преобразование x-координаты """
     return SIZE / 2 + SCALE * p.x
 
 
-def y(p): # pragma: no cover
+def y(p):  # pragma: no cover
     """" преобразование y-координаты """
     return SIZE / 2 - SCALE * p.y
 
 
-class TkDrawer:
+class TkDrawer:  # pragma: no cover
     """ Графический интерфейс """
 
     # Конструктор
-    def __init__(self): # pragma: no cover
+    def __init__(self):
         self.root = Tk()
         self.root.title("Изображение проекции полиэдра")
         self.root.geometry(f"{SIZE+5}x{SIZE+5}")
@@ -30,16 +30,16 @@ class TkDrawer:
         self.canvas.pack(padx=5, pady=5)
 
     # Завершение работы
-    def close(self): # pragma: no cover
+    def close(self):
         self.root.quit()
 
     # Стирание существующей картинки
-    def clean(self): # pragma: no cover
+    def clean(self):
         self.canvas.create_rectangle(0, 0, SIZE, SIZE, fill="white")
         self.root.update()
 
     # Рисование линии
-    def draw_line(self, p, q): # pragma: no cover
+    def draw_line(self, p, q):
         self.canvas.create_line(x(p), y(p), x(q), y(q), fill="black", width=1)
         self.root.update()
 
