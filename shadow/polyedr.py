@@ -172,7 +172,7 @@ class Polyedr:
         for e in self.edgest:
             if (e.beg, e.fin) not in edges and (e.fin, e.beg) not in edges:
                 edges[(e.beg, e.fin)] = e
-                if e.beg.in_reg() and e.fin.in_reg():
+                if not(e.beg.in_reg()) and not(e.fin.in_reg()):
                     self.s += e.beg.dist(e.fin)
         return self.s
 
