@@ -11,9 +11,10 @@ try:
         print("=============================================================")
         print(f"Начало работы с полиэдром '{name}'")
         start_time = time()
-        print(f'Сумма длин рёбер, удовлетворяющих условию: {Polyedr(f"data/{name}.geom").edges_lenght()}')
-        delta_time = time() - start_time
-        print(f"Высчитывание суммы длин рёбер полиэдра '{name}' заняло {delta_time} сек.")
+        a = Polyedr(f"data/{name}.geom").edges_lenght()
+        print(f'Сумма длин рёбер, удовлетворяющих условию: {a}')
+        dlt_tm = time() - start_time
+        print(f"Вычисление суммы длин рёбер полиэдра '{name}' заняло {dlt_tm} сек.")
         start_time = time()
         Polyedr(f"data/{name}.geom").draw(tk)
         delta_time = time() - start_time
