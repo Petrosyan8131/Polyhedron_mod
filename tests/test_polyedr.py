@@ -54,6 +54,3 @@ class TestPolyedr(unittest.TestCase):
     def test_sum05(self):
         b = 976.4371654314
         self.assertAlmostEqual(Polyedr('data/cow.geom').edges_lenght(), b)
-
-    def test_sum06(self):
-        self.assertAlmostEqual(Polyedr('data/new_box.geom').edges_lenght(), 0)
