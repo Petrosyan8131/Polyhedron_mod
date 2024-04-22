@@ -37,7 +37,7 @@ class R3:
     def ry(self, fi):
         return R3(cos(fi) * self.x + sin(fi) * self.z,
                   self.y, -sin(fi) * self.x + cos(fi) * self.z)
-        
+
     # лежит ли точка в указанной области (строго меджу окружностями)
     def in_reg(self):
         if ((self.x**2 + self.y**2) < 4) and ((self.x**2 + self.y**2) > 1):
